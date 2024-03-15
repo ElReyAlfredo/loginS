@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script></script>
+    <title>LoginSeguro</title>
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <% if (!user) { %>
+    <a href="/signin">Signin</a>
+    <a href="/signup">Signup</a>
+    <% } else { %>
+    <a href="/logout">Logout</a>
+    <a href="/profile">Profle</a>
+    <% } %> <%if (signinMessage) {%>
+    <p><%= signinMessage %></p>
+    <% } %> <%if (signupMessage) {%>
+    <p><%= signupMessage %></p>
+    <% } %> <%- body %>
+  </body>
+</html>
