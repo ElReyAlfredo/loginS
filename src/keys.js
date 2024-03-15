@@ -1,5 +1,5 @@
 module.exports = {
   mongodb: {
-    URI: "mongodb://127.0.0.1:27017/login",
+    URI: "mongodb+srv://jdelgado7:mKsh4RQ6GgB7b5Yh@cluster0.4kmkl37.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   },
 };
