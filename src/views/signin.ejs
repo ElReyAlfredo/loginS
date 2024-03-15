@@ -1,7 +1,35 @@
 <%- layout('layouts/main') %>
-
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
 <form action="/signin" method="POST">
   <input type="email" name="email" placeholder="Email" />
   <input type="password" id="password" name="password" placeholder="Password" />
-  <button type="submit" onclick="encryptPassword()"">SignIn</button>
+  <button type="submit">Login</button>
 </form>

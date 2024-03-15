@@ -7,17 +7,55 @@
     <title>LoginSeguro</title>
   </head>
   <body>
-    <!-- NAVIGATION -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .nav-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .nav-links li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .nav-links li a {
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .nav-links li a:hover {
+        background-color: #0056b3;
+      }
+      .message {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+
     <% if (!user) { %>
-    <a href="/signin">Signin</a>
-    <a href="/signup">Signup</a>
+    <ul class="nav-links">
+      <li><a href="/signin">Signin</a></li>
+      <li><a href="/signup">Signup</a></li>
+    </ul>
     <% } else { %>
-    <a href="/logout">Logout</a>
-    <a href="/profile">Profle</a>
-    <% } %> <%if (signinMessage) {%>
-    <p><%= signinMessage %></p>
-    <% } %> <%if (signupMessage) {%>
-    <p><%= signupMessage %></p>
+    <ul class="nav-links">
+      <li><a href="/logout">Logout</a></li>
+      <li><a href="/profile">Profile</a></li>
+    </ul>
+    <% } %> <% if (signinMessage) { %>
+    <div class="message">
+      <p><%= signinMessage %></p>
+    </div>
+    <% } %> <% if (signupMessage) { %>
+    <div class="message">
+      <p><%= signupMessage %></p>
+    </div>
     <% } %> <%- body %>
   </body>
 </html>
